@@ -24,13 +24,17 @@ export interface IUserRegister extends IUserLogin {
 }
 
 export interface IUser extends IUserLogin {
-  avatar: string;
+  avatar: string
   createdAt: string;
   name: string;
   role: string;
   type: string;
   updatedAt: string;
   _id: string;
+}
+
+export interface IUserInfo extends IUserRegister {
+  avatar: string| File
 }
 
 export interface IAlert {

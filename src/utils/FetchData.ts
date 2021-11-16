@@ -38,3 +38,18 @@ export const getAPI = async (url:string, token: any) => {
   const data = await res.json()
   return data
 }
+
+
+export const patchAPI = async (url:string, post:object, token: any ) => {
+  const res = await fetch(`/api/${url}`, {
+      method: 'PATCH',
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': token
+      },
+      body: JSON.stringify(post)
+  })
+
+  const data = await res.json()
+  return data
+}

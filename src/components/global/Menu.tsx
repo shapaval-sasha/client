@@ -50,7 +50,7 @@ const Menu = () => {
              />
            </span>
            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-             <li><Link className="dropdown-item" to='/profile'>Profile</Link></li>
+             <li><Link className="dropdown-item" to={`/profile/${auth.user._id}`}>Profile</Link></li>
              <li><Link className="dropdown-item" to="/" onClick={()=>dispatch(logout())}>Logout</Link></li>
            </ul>
          </li>
