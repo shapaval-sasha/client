@@ -12,7 +12,7 @@ export const validRegister = (userRegister:IUserRegister) =>{
     
     if(!account){
      errors.push('Please add your email or phone')} else if (validPhone(account)){
-    errors.push('Email or phone number format is incirrect.')
+    errors.push('Email or phone number format is incorrect.')
     }
     
     if(password.length<6){
